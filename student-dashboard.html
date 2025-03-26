@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Attendance Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="logo">
+                <h2>AMS</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="student-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#" id="viewAttendanceBtn"><i class="fas fa-calendar-check"></i> View Attendance</a></li>
+                <li><a href="#" id="profileBtn"><i class="fas fa-user"></i> Profile</a></li>
+                <li class="logout"><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <div class="title">
+                    <h1>Student Dashboard</h1>
+                </div>
+                <div class="user-info">
+                    <span id="studentName">Student</span>
+                    <img src="assets/user.png" alt="Student">
+                </div>
+            </div>
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Present Days</h3>
+                        <p id="presentDays">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-times"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Absent Days</h3>
+                        <p id="absentDays">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Attendance Rate</h3>
+                        <p id="attendanceRate">0%</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Course</h3>
+                        <p id="studentCourse">N/A</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="student-profile">
+                <h2>Student Profile</h2>
+                <div class="profile-details">
+                    <div class="profile-item">
+                        <span class="label">Student ID:</span>
+                        <span id="profileStudentId" class="value"></span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="label">Full Name:</span>
+                        <span id="profileFullName" class="value"></span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="label">Email:</span>
+                        <span id="profileEmail" class="value"></span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="label">Course:</span>
+                        <span id="profileCourse" class="value"></span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="label">Registration Date:</span>
+                        <span id="profileRegDate" class="value"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="attendance-history hidden" id="attendanceHistorySection">
+                <h2>Attendance History</h2>
+                <div class="attendance-table-container">
+                    <table class="attendance-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="attendanceHistoryBody">
+                            <!-- Attendance history will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/student-dashboard.js"></script>
+</body>
+</html>
